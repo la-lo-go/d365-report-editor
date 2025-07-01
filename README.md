@@ -1,5 +1,5 @@
 # D365 Report Editor - Built to simplify Microsoft Dynamics 365 Report Editing
-![D365 Report Editor](public\D365-Report-Editor.png)
+![D365 Report Editor](./public/D365-Report-Editor.png)
 
 ## What does it do?
 
