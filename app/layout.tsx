@@ -4,7 +4,7 @@ import { ThemeProvider } from '@/components/theme-provider'
 
 export const metadata: Metadata = {
   title: 'D365 Report Editor',
-  description: 'A tool for editing the XML files inside D365 Word reports',
+  description: 'A tool for editing the XML files inside D365 Word reports without unzipping',
 }
 
 export default function RootLayout({
