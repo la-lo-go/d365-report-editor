@@ -7,6 +7,7 @@ interface FileExplorerProps {
   files: string[]
   selectedFile: string | null
   onFileSelect: (path: string) => void
+  fileName?: string
 }
 
 interface FolderStructure {
@@ -16,7 +17,7 @@ interface FolderStructure {
   }
 }
 
-export default function FileExplorer({ files, selectedFile, onFileSelect }: FileExplorerProps) {
+export default function FileExplorer({ files, selectedFile, onFileSelect, fileName }: FileExplorerProps) {
   const [expandedFolders, setExpandedFolders] = useState<Set<string>>(new Set(["customXml"]))
 
   const folderStructure: FolderStructure = {}
@@ -90,7 +91,11 @@ export default function FileExplorer({ files, selectedFile, onFileSelect }: File
 
   return (
     <div className="h-full overflow-auto">
-      <div className="font-medium p-2 border-b sticky top-0 bg-card text-primary">Files</div>
+      <div className="font-medium p-2 border-b sticky top-0 bg-card text-primary">
+        <div className="truncate" title={fileName}>
+          {fileName || "Files"}
+        </div>
+      </div>
       {renderFolder(folderStructure)}
     </div>
   )
