@@ -50,7 +50,7 @@ pnpm-lock.yaml
 *.lcov
 
 # editor and IDE
-.vscode/*
+/.vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
